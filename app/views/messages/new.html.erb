@@ -1,0 +1,6 @@
+<%= form_for @message do |f| %>
+  <%= f.label :message %>
+  <%= f.text_area :contents %>
+  <%= f.label :file %>
+  <%= f.file_field :csv_file %>
+<% end %>
