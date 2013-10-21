@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TwilioTest</title>
+  <title>TwilioTest Homepage</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<div class="flashes">
+  <% flash.each do |key, value| %>
+    <h2><%= key.to_s.capitalize %></h2>
+    <ul><li><%= value %></li></ul>
+  <% end %>
+</div>
 
 <%= yield %>
 
