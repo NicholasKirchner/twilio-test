@@ -10,6 +10,7 @@ group :development, :test do
 end
 
 gem 'pg'
+gem 'twilio-ruby'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

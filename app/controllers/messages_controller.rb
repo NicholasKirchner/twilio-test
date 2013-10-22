@@ -25,6 +25,7 @@ class MessagesController < ApplicationController
     end
     if @message.save
       flash[:success] = "Message and data stored to database"
+      @message.send_via_sms unless Rails.env.test?
       redirect_to root_url
     else
       flash[:errors] = "Please check the message length and try again"
