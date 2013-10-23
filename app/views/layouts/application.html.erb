@@ -7,15 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="container">
 
-<div class="flashes">
-  <% flash.each do |key, value| %>
-    <h2><%= key.to_s.capitalize %></h2>
-    <ul><li><%= value %></li></ul>
-  <% end %>
+  <div class="flashes">
+    <% flash.each do |key, value| %>
+      <h2><%= key.to_s.capitalize %></h2>
+      <ul><li><%= value %></li></ul>
+    <% end %>
+  </div>
+
+  <div class="center hero-unit main-form">
+    <%= yield %>
+  </div>
 </div>
-
-<%= yield %>
 
 </body>
 </html>

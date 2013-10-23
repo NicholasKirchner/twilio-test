@@ -15,6 +15,7 @@ end
 
 gem 'pg'
 gem 'twilio-ruby'
+gem 'bootstrap-sass'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

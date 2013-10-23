@@ -1,8 +1,10 @@
 <%= form_for @message do |f| %>
-  <%= f.label :message %>
-  <%= f.text_area :contents %><br />
-  <%= f.label :file %>
-  <%= f.file_field :csv_file %><br />
+  Type a message.  Keep it under 140 characters.<br />
+  <%= f.text_area :contents %><br /><br />
+
+  Attach a csv file with column 1 containing first names and
+  column 2 containing phone numbers.<br />
+  <%= f.file_field :csv_file %><br /><br />
 
   <%= f.submit "Fire Away!" %>
 <% end %>

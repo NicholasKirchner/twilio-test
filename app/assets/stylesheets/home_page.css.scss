@@ -1,0 +1,14 @@
+@import "bootstrap";
+
+body {
+    background-image: url(asset-path('grass.jpg'));
+}
+
+.main-form {
+    background-color: #99F;
+    margin-top: 150px;
+}
+
+form {
+    text-align: center;
+}
