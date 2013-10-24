@@ -1,10 +1,14 @@
 <%= form_for @message do |f| %>
   Type a message.  Keep it under 140 characters.<br />
-  <%= f.text_area :contents %><br /><br />
+  <%= f.text_area :contents, id: "message_content" %><br /><br />
 
   Attach a csv file with column 1 containing first names and
   column 2 containing phone numbers.<br />
-  <%= f.file_field :csv_file %><br /><br />
+  <%= f.file_field :csv_file, id: "recipients_file" %><br /><br />
 
   <%= f.submit "Fire Away!" %>
 <% end %>
+
+<div class="char-status">
+  The longest first name contains <span id="char-name">0 characters</span>, and the message contains <span id="char-message">0 characters</span>.  You have <span id="char-remain">138 characters</span> remaining.
+</div>
